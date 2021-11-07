@@ -4,7 +4,11 @@
 	require "models/product.php";
 	$product = new Product;
 	$getAllProducts = $product->getAllProducts();
-
+	$getLapTops = $product -> getLapTops();
+	$getSmartPhone = $product -> getSmartPhone();
+	$getPC = $product -> getPC();
+	$getAccessories = $product -> getAccessories();
+	$getTablet= $product -> gettablet();
 ?>
 
 <!DOCTYPE html>
