@@ -1,8 +1,4 @@
-<?php
-	  include "header.php";
-	 
- ?>
-
+<?php include "header.php" ?>
 
 		<!-- BREADCRUMB -->
 		<div id="breadcrumb" class="section">
@@ -241,33 +237,27 @@
 
 						<!-- store products -->
 						<div class="row">
-							<?php
-								if(isset($_GET['keyword'])):
-								$keyword = $_GET['keyword'];
-								$search = $product->search($keyword);
-								foreach($search as $value):
-								
-							?>
+
+						<?php foreach($getAllProducts as $value): ?>
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>"alt="">
+										<img src="./img/<?php echo $value['image']?>" alt="">
 										<div class="product-label">
-											<span class="sale">-30%</span>
 											<span class="new">NEW</span>
 										</div>
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price'])?> VND </h4>
+										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
 										</div>
 										<div class="product-btns">
 											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -279,14 +269,13 @@
 										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 									</div>
 								</div>
+								
 							</div>
 							<!-- /product -->
 
-							<?php
-								endforeach;
-							endif
-							?>
-						
+							<div class="clearfix visible-sm visible-xs"></div>
+							<?php endforeach; ?>
+
 						</div>
 						<!-- /store products -->
 
@@ -310,7 +299,4 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-
-<?php include "footer.htm" ?>		
-	</body>
-</html>
+<?php include "footer.htm" ?>

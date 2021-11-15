@@ -2,7 +2,10 @@
 	require "config.php";
 	require "models/db.php";
 	require "models/product.php";
+	require "models/protype.php";
+	$protype = new Protype;
 	$product = new Product;
+	$getAllProtype = $protype->getAllProtype();
 	$getAllProducts = $product->getAllProducts();
 	$getLapTops = $product -> getLapTops();
 	$getSmartPhone = $product -> getSmartPhone();
@@ -174,3 +177,25 @@
 			<!-- /MAIN HEADER -->
 		</header>
 		<!-- /HEADER -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+					<li class="active"><a href="index.php">Home</a></li>
+					<?php
+					foreach ($getAllProtype as $value) :
+					?>
+						<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>">
+						<?php echo $value['type_name'] ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAV
