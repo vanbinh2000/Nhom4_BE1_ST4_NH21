@@ -170,37 +170,21 @@
 						<!-- aside Widget -->
 						<div class="aside">
 							<h3 class="aside-title">Top selling</h3>
+							<div class="products-widget-slick" data-nav="#slick-nav-4">
+							<?php foreach($getAllProducts as $value): ?>
 							<div class="product-widget">
+						
 								<div class="product-img">
-									<img src="./img/product01.png" alt="">
+									<img src="./img/<?php echo $value['image'] ?>" alt="">
 								</div>
 								<div class="product-body">
 									<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="#">product name goes here</a></h3>
-									<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+									<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+									<h4 class="product-price"><?php echo $value['price'] ?></h4>
 								</div>
 							</div>
+							<?php endforeach;?>
 
-							<div class="product-widget">
-								<div class="product-img">
-									<img src="./img/product02.png" alt="">
-								</div>
-								<div class="product-body">
-									<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="#">product name goes here</a></h3>
-									<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-								</div>
-							</div>
-
-							<div class="product-widget">
-								<div class="product-img">
-									<img src="./img/product03.png" alt="">
-								</div>
-								<div class="product-body">
-									<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="#">product name goes here</a></h3>
-									<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-								</div>
 							</div>
 						</div>
 						<!-- /aside Widget -->
@@ -266,7 +250,7 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
 									</div>
 								</div>
 								
