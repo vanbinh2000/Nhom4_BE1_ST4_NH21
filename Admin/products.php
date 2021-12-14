@@ -45,18 +45,18 @@
                       <th style="width: 20%">
                           Name
                       </th>
-                      <th style="width: 30%">
+                      <th style="width: 8%">
                           Image
                       </th>
                       
-                      <th style="width: 8%" class="text-center">
+                      <th style="width: 20%" class="text-center">
                           Description
                       </th>
                       <th style="width: 8%">
-                          Type_id
+                          Protype
                       </th>
                       <th style="width: 8%">
-                          Manu_id
+                          Manufature
                       </th>
                       <th style="width: 20%">
                       </th>
@@ -89,23 +89,18 @@
                           <span><?php echo substr($value['description'],0,50) ?></span>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success"><?php echo $value['type_id'] ?></span>
+                          <span><?php echo $value['type_name'] ?></span>
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success"><?php echo $value['manu_id'] ?></span>
+                          <span ><?php echo $value['manu_name'] ?></span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="editproduct.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delProduct.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
