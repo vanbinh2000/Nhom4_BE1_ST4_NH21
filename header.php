@@ -186,7 +186,7 @@
 					<ul class="main-nav nav navbar-nav">
 					<li class="active"><a href="index.php">Home</a></li>
 					<?php
-					foreach ($getAllProtype as $value) :
+					foreach ($getAllProtype as $value):
 					?>
 						<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>">
 						<?php echo $value['type_name'] ?></a></li>
@@ -198,4 +198,18 @@
 			</div>
 			<!-- /container -->
 		</nav>
-		<!-- /NAV
+		<!-- /NAV-->
+		<!--modal quickview -->
+<div class="modal fade" id = "empModal" role = "dialog">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+													</div>
+													<div class="modal-body"></div>
+													<div class="modal-footer">
+														<button type="button" class = "btn btn-default" data-dismiss = "modal">Close</button>
+													</div>
+												</div>
+											</div>
+								
+								</div>
