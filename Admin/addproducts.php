@@ -74,7 +74,7 @@
               <!-- price-->
               <div class="form-group">
                 <label for="inputClientCompany">Price</label>
-                <input type="text" id="inputClientCompany" class="form-control" name = "price">
+                <input type="number" id="inputClientCompany" class="form-control" name = "price">
               </div>
               <!-- Description-->
               <div class="form-group">
@@ -95,7 +95,7 @@
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">Create at</label>
-                <input type="text" id="inputProjectLeader" class="form-control" name="create" placeholder= "yyyy-mm-dd">
+                <input type="date" id="inputProjectLeader" class="form-control" name="create" placeholder= "yyyy-mm-dd">
               </div>
             <div class="form-group">
                 <label for="inputProjectLeader">Hang ton</label>
@@ -118,5 +118,6 @@
     </section>
     <!-- /.content -->
   </div>
+  
   <!-- /.content-wrapper -->
 <?php include "footer.html" ?>

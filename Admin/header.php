@@ -4,6 +4,8 @@
    require "models/product.php";
    require "models/protype.php";
    require "models/manufacture.php";
+   require "models/user.php";
+   $user = new user;
    $product = new Product;
    $protype = new Protype;
    $manufacture = new Manufacture;
@@ -250,9 +252,28 @@
                   <p> Add Products</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="users.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Usres</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addUsers.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>AddUsers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addprotypes.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p> Add Protypes</p>
+                </a>
+              </li>
               
       </nav>
       <!-- /.sidebar-menu -->
     </div>
+  
     <!-- /.sidebar -->
   </aside>
