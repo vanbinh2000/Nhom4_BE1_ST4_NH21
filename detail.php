@@ -1,5 +1,4 @@
 <?php 
-session_start();
 include "header.php" ?>
 <?php 
 $getProductById = $product -> getProductById($_GET['id']);
@@ -54,7 +53,7 @@ if (isset($_GET['action'])) {
 							</div>
 
 							<div class="add-to-cart">
-							<button name="addCart" class="add-to-cart-btn" onclick="addCart(<?php echo $getProductById[0]['id'];?>)"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							<button name="addCart" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 							<ul class="product-links">
 								<li>Category:</li>

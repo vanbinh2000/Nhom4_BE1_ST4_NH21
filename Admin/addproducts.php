@@ -78,8 +78,8 @@
               </div>
               <!-- Description-->
               <div class="form-group">
-                <label for="inputProjectLeader">Description</label>
-                <input type="text" id="inputProjectLeader" class="form-control" name = "Desc">
+                <label for="inputDescription">Project Description</label>
+                <textarea id="description" class="form-control" rows="4" name  = "desc"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">img</label>

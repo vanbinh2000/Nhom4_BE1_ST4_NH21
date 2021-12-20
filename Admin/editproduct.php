@@ -79,8 +79,8 @@
               </div>
               <!-- Description-->
               <div class="form-group">
-                <label for="inputProjectLeader">Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4" name  = "desc" ><?php  echo $value['description']  ?></textarea>
+                <label for="inputDescription">Project Description</label>
+                <textarea id="description" class="form-control" rows="4" name  = "desc"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">img</label>
