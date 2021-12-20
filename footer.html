@@ -137,6 +137,21 @@
 <script src="js/nouislider.min.js"></script>
 <script src="js/jquery.zoom.min.js"></script>
 <script src="js/main.js"></script>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+            $('.quick-view').click(function(){
+            var productID = $(this).data('id');
+            $.ajax({
+                url: "showQV.php",
+                type: 'post',
+                data: {productID: productID},
+                success: function(response){
+                    $('.modal-body').html(response);
+                    $('#empModal').modal('show');
+                }
+            });
+    });
+});
+</script>
 </body>
 </html>

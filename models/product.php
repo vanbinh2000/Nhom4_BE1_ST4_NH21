@@ -16,12 +16,26 @@ class Product extends Db
     {
         $sql = self::$connection->prepare("SELECT * FROM products WHERE id = ?");
         $sql->bind_param("i", $id);
+        $sql->execute(); //return an object 
+
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+
+
+    //get product by type
+    public function getProductByType($type_id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE `type_id` = ?");
+        $sql->bind_param("i", $id);
         $sql->execute(); //return an object
 
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+
 
     //search
     public function search($keyword)
@@ -112,15 +126,7 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-    public function getProductByType($type_id)
-    {
-        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = ?");
-        $sql->bind_param("i", $type_id);
-        $sql->execute(); //return an object
-        $items = array();
-        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items; //return an array
-    }
+
     public function paginate($url, $total, $perPage)    {        $totalLinks = ceil($total / $perPage);
         $link = "";
         for ($j = 1; $j <= $totalLinks; $j++) {

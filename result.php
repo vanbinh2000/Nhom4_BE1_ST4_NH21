@@ -311,6 +311,4 @@
 		</div>
 		<!-- /SECTION -->
 
-<?php include "footer.htm" ?>		
-	</body>
-</html>
+<?php include "footer.html" ?>

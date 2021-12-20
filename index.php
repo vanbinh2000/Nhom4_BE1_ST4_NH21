@@ -1,6 +1,5 @@
 <?php include "header.php" ?>
 
-		
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -88,6 +87,8 @@
 									<div class="products-slick" data-nav="#slick-nav-1">
 										<?php foreach ($getLapTops as $value):?>
 											
+											
+
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
@@ -95,19 +96,10 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+												<h3 class="product-name"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
+												<button data-id = "<?php echo $value['id']?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -120,6 +112,7 @@
 									<div id="slick-nav-1" class="products-slick-nav"></div>
 								</div>
 								<!-- /tab -->
+								
 								<!-- tab -->
 								<div id="tab2" class="tab-pane">
 									<div class="products-slick" data-nav="#slick-nav-2">
@@ -131,7 +124,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+												<h3 class="product-name"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -141,9 +134,7 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
+												<button data-id = "<?php echo $value['id']?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -167,7 +158,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+												<h3 class="product-name"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -177,9 +168,7 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
+												<button data-id = "<?php echo $value['id']?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -202,7 +191,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+												<h3 class="product-name"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -212,9 +201,7 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
+												<button data-id = "<?php echo $value['id']?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -238,7 +225,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+												<h3 class="product-name"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -248,9 +235,7 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
+												<button data-id = "<?php echo $value['id']?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -342,194 +327,6 @@
 					</div>
 					<!-- /section title -->
 
-					<!-- Products tab & slick -->
-					<div class="col-md-12">
-						<div class="row">
-							<div class="products-tabs">
-								<!-- tab -->
-								<div id="taba" class="tab-pane active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-										<?php foreach ($getLapTops as $value):?>
-											
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image'] ?>" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											</div>
-										</div>
-										<?php endforeach;?>
-									</div>
-								
-									<div id="slick-nav-1" class="products-slick-nav"></div>
-								</div>
-								<!-- /tab -->
-								<!-- tab -->
-								<div id="tabb" class="tab-pane">
-									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getSmartPhone as $value): ?>
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image']?>" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<?php endforeach?>
-									</div>
-									<div id="slick-nav-2" class="products-slick-nav"></div>
-								</div>
-								<!-- /tab -->
-								<!-- tab -->
-								<div id="tabc" class="tab-pane">
-									<div class="products-slick" data-nav="#slick-nav-3">
-										<?php foreach($getPC as $value): ?>
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image']?>" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<?php endforeach?>
-									</div>
-									<div id="slick-nav-3" class="products-slick-nav"></div>
-								</div>
-								<!-- /tab --><!-- tab -->
-								<div id="tabd" class="tab-pane">
-									<div class="products-slick" data-nav="#slick-nav-4">
-										<?php foreach($getAccessories as $value): ?>
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image']?>" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<?php endforeach?>
-									</div>
-									<div id="slick-nav-4" class="products-slick-nav"></div>
-								</div>
-								<!-- /tab -->
-								<!-- tab -->
-								<div id="tabe" class="tab-pane">
-									<div class="products-slick" data-nav="#slick-nav-5">
-										<?php foreach($getTablet as $value): ?>
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image']?>" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price'])?></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><a href="detail.php?id=<?php echo $value['id'] ?>&type_id=<?php echo $value['type_id'] ?>"><i class="fa fa-eye"></i><span class="tooltipp"> quick view</a></span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-											</div>
-										</div>
-										<!-- /product -->
-										<?php endforeach?>
-									</div>
-									<div id="slick-nav-5" class="products-slick-nav"></div>
-								</div>
-								<!-- /tab -->
-							</div>
-						</div>
-					</div>
-					<!-- Products tab & slick -->
 				</div>
 				<!-- /row -->
 			</div>
@@ -542,109 +339,7 @@
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-					<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">Top selling</h4>
-							<div class="section-nav">
-								<div id="slick-nav-3" class="products-slick-nav"></div>
-							</div>
-						</div>
-						
-						<div class="products-widget-slick" data-nav="#slick-nav-3">
-						<?php
-							$getAllProductsLMS = $product-> getAllLiMitProducts(); 
-							foreach($getAllProductsLMS as $value): 
-						?>
-							<div>
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-							</div>
-							<?php endforeach; ?>
-						</div>
-						
-					</div>
-
-					<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">Top selling</h4>
-							<div class="section-nav">
-								<div id="slick-nav-4" class="products-slick-nav"></div>
-							</div>
-						</div>
-						
-						<div class="products-widget-slick" data-nav="#slick-nav-4">
-						<?php
-							$getAllProductsLMS = $product-> getAllLiMitProducts(); 
-							foreach($getAllProductsLMS as $value): 
-						?>
-							<div>
-							
-							<!-- product widget -->
-							<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
-									</div>
-								</div>
-								<!-- /product widget -->
-							
-							</div>
-							
-							<?php endforeach; ?>
-							
-						</div>
-						
-					</div>
-
-					<div class="clearfix visible-sm visible-xs"></div>
-
-					<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">Top selling</h4>
-							<div class="section-nav">
-								<div id="slick-nav-5" class="products-slick-nav"></div>
-							</div>
-						</div>
-						
-						<div class="products-widget-slick" data-nav="#slick-nav-5">
-						<?php
-							$getAllProductsLMS = $product-> getAllLiMitProducts(); 
-							foreach($getAllProductsLMS as $value): 
-						?>
-							<div>
-								<!-- product widget -->
-							<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
-									</div>
-								</div>
-								<!-- /product widget -->
-							</div>
-							<?php endforeach; ?>
-						</div>
-						
-					</div>
-
+					
 				</div>
 				<!-- /row -->
 			</div>

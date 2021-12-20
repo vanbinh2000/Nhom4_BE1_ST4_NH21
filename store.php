@@ -264,7 +264,7 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
+										<button class="add-to-cart-btn" name="add_cart"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
 									</div>
 								</div>
 								
