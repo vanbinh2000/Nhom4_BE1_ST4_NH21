@@ -1,7 +1,12 @@
-<?php include "header.php" ?>
+<?php 
+include "header.php" ?>
 <?php 
 $getProductById = $product -> getProductById($_GET['id']);
 $getRelatedProducts = $product -> getRelatedProducts($_GET['type_id']);
+
+if (isset($_GET['action'])) {
+	var_dump($_POST);
+}
 ?>
 		<!-- BREADCRUMB -->
 		<div id="breadcrumb" class="section">
@@ -48,13 +53,12 @@ $getRelatedProducts = $product -> getRelatedProducts($_GET['type_id']);
 							</div>
 
 							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							<button name="addCart" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 							<ul class="product-links">
 								<li>Category:</li>
 								<li><a href="#"><?php echo $getRelatedProducts[0]['type_name'] ?></a></li>
 							</ul>
-
 						</div>
 					</div>
 					<!-- /Product details -->

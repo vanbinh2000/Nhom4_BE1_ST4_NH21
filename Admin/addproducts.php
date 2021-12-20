@@ -44,7 +44,7 @@
                 <label for="inputDescription">Manufactures</label>
                 <select id="inputStatus" class="form-control custom-select" name ="manu">
                   <?php
-                  $getAllManu = $manufacture -> getAllManfacture();
+                  $getAllManu = $manufacture -> getAllManufacture();
                   foreach ($getAllManu as $value):
                   ?> 
                   <option value = <?php echo $value['manu_id']?>>
@@ -78,8 +78,8 @@
               </div>
               <!-- Description-->
               <div class="form-group">
-                <label for="inputProjectLeader">Description</label>
-                <input type="text" id="inputProjectLeader" class="form-control" name = "Desc">
+                <label for="inputDescription">Project Description</label>
+                <textarea id="description" class="form-control" rows="4" name  = "desc"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">img</label>
