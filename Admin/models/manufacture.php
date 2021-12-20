@@ -8,4 +8,12 @@ class Manufacture extends Db{
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    public function countManu()
+    {
+        $sql = self::$connection->prepare("SELECT count(*) as SoLuong from `manufactures`");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
 }

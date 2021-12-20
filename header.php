@@ -12,6 +12,7 @@
 	$getPC = $product -> getPC();
 	$getAccessories = $product -> getAccessories();
 	$getTablet= $product -> gettablet();
+	
 ?>
 
 <!DOCTYPE html>
