@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Manufactures</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Projects</li>
+              <li class="breadcrumb-item active">Manufactures</li>
             </ol>
           </div>
         </div>
@@ -24,7 +24,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Projects</h3>
+          <h3 class="card-title">Manufactures</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,56 +40,52 @@
               <thead>
                   <tr>
                       <th style="width: 1%">
-                          Manu_id
+                          manu_id
                       </th>
                       <th style="width: 20%">
-                          Manu_name
-                      </th>
+                          manu_name
                       <th style="width: 20%">
-                         Lo_Go
+                          manu_logo
                       </th>
+                      <th style="width: 95%;">
+                    </th>
                   </tr>
               </thead>
-              <?php
-                $getAllManufactures = $manufacture->getAllManfacture();
-                foreach($getAllManufactures as $value): 
+              <?php $getAllManufacters = $manufacture->getAllManufacture();
+              foreach($getAllManufacters as $value):
               ?>
               <tbody>
-                  <tr>
+              <tr>
                       <td>
                           <?php echo $value['manu_id'] ?>
                       </td>
                       <td>
                           <a>
-                          <?php echo $value['manu_name'] ?>
+                              <?php echo $value['manu_name'] ?>
                           </a>
-                         
                       </td>
-                      
                       <td>
-                      <img alt="" width="50px" height="50px" src="../img/<?php echo $value['manu_logo'] ?>">
+                          <ul class="list-inline">
+                              <li class="list-inline-item">
+                                  <img alt="" style="width: 70px;" src="../img/<?php echo $value['manu_logo'] ?>">
+                              </li>
+                              
+                          </ul>
                       </td>
-                      
-                      
+
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
-                          <a class="btn btn-info btn-sm" href="#">
-                              <i class="fas fa-pencil-alt">
+                          <a class="btn btn-info btn-sm" href="manufactureEdit.php?id=<?php echo $value['manu_id'] ?>">
+                              <i class="fas fa-pencil-alt" >
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a onclick="return Del('<?php echo $value['manu_name'] ?>')" class="btn btn-danger btn-sm" href="delmanufacture.php?id=<?php echo $value['manu_id'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
                           </a>
                       </td>
                   </tr>
-
               </tbody>
               <?php endforeach; ?>
           </table>
@@ -102,5 +98,9 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <?php include "footer.html" ?>
+  <script>
+    function Del(name){
+      return confirm("Bạn có chắc muốn xoá " + name + "?");
+    }
+  </script>
+<?php include "footer.html" ?>
