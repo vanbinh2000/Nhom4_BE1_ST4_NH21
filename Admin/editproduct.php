@@ -37,7 +37,7 @@
                 <label for="inputDescription">Manufactures</label>
                 <select id="inputStatus" class="form-control custom-select" name ="manu">
                   <?php
-                  $getAllManu = $manufacture -> getAllManfacture();
+                  $getAllManu = $manufacture -> getAllManufacture();
                   foreach ($getAllManu as $value1):
                     if ($value1['manu_id'] == $value['manu_id']):
                   ?> 
