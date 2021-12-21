@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php
+$page = "products";
+include "header.php" ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
