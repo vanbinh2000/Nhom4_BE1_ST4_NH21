@@ -108,26 +108,25 @@ $gettopsellingTablets = $product->gettopsellingTablets();
 						</div>
 					</div>
 					<!-- /SEARCH BAR -->
-
 					<!-- ACCOUNT -->
 					<div class="col-md-3 clearfix">
 						<div class="header-ctn">
 							<!-- Wishlist -->
 							<div>
-								<a href="#">
+								<a href="listwish.php">
 									<i class="fa fa-heart-o"></i>
 									<span>Your Wishlist</span>
-									<div class="qty">2</div>
+
 								</a>
 							</div>
 							<!-- /Wishlist -->
 
 							<!-- Cart -->
 							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+								<a href="listcart.php">
 									<i class="fa fa-shopping-cart"></i>
 									<span>Your Cart</span>
-									<div class="qty">3</div>
+
 								</a>
 								<div class="cart-dropdown">
 									<div class="cart-list">

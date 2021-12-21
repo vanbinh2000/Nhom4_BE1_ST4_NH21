@@ -18,7 +18,7 @@
 					<div class="col-md-12">
 						
 						<ul class="breadcrumb-tree">
-							<li><a href="listcart.php">Danh Sach Giỏ Hàng</a></li>
+							
 							<li><a href="#">Home</a></li>
 							<li><a href="#">All Categories</a></li>
 							<li><a href="#">Accessories</a></li>
@@ -258,13 +258,16 @@
 											<i class="fa fa-star-o"></i>
 										</div>
 										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+											
 											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+											
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn" name="add_cart"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
+										<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+										<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+										</form>
+										
 									</div>
 								</div>
 								
