@@ -120,5 +120,6 @@ include "header.php" ?>
     </section>
     <!-- /.content -->
   </div>
+  
   <!-- /.content-wrapper -->
 <?php include "footer.html" ?>

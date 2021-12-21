@@ -102,7 +102,7 @@ include "header.php" ?>
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="delProduct.php?id=<?php echo $value['id'] ?>">
+                          <a onclick="return Del('<?php echo $value['name'] ?>')" class="btn btn-danger btn-sm" href="delProduct.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
@@ -122,5 +122,9 @@ include "header.php" ?>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  <script>
+      function Del(name) {
+        return confirm("Bạn có chắc muốn xoá "+ name + " ?");
+      }
+  </script>
   <?php include "footer.html" ?>

@@ -1,6 +1,4 @@
-<?php
-$page = "protype";
-include "header.php" ?>
+<?php include "header.php" ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -42,38 +40,51 @@ include "header.php" ?>
               <thead>
                   <tr>
                       <th style="width: 1%">
-                          Type_id
+                          ID
                       </th>
                       <th style="width: 20%">
-                          Type_name
+                          Fullname
+                      </th>
+                      <th style="width: 8%">
+                          Email
+                      </th>
+                      
+                      <th style="width: 20%" class="text-center">
+                          Password
                       </th>
                     
                   </tr>
               </thead>
               <?php
-                $getAllProtypes = $protype->getAllProtype();
-                foreach($getAllProtypes as $value): 
+                $getAllUser = $user->getAllUsers();
+                foreach($getAllUser as $value): 
               ?>
               <tbody>
                   <tr>
                       <td>
-                          <?php echo $value['type_id'] ?>
+                          <?php echo $value['id'] ?>
                       </td>
                       <td>
                           <a>
-                          <?php echo $value['type_name'] ?>
+                          <?php echo $value['fullname'] ?>
                           </a>
                          
                       </td>
-                      
+                     
+                      <td class="project_progress">
+                          <span><?php echo $value['email']?></span>
+                      </td>
+                      <td class="project-state">
+                          <span><?php echo $value['password'] ?></span>
+                      </td>
                       <td class="project-actions text-right">
-          
-                          <a class="btn btn-info btn-sm" href="editprotype.php?id=<?php echo $value['type_id'] ?>">
+                          
+                          <a class="btn btn-info btn-sm" href="editUsers.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a onclick="return Del('<?php echo $value['type_name'] ?>')" class="btn btn-danger btn-sm" href="delprotype.php?id=<?php echo $value['type_id'] ?>">
+                          <a onclick="return Del('<?php echo $value['fullname'] ?>')" class="btn btn-danger btn-sm" href="delusers.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
@@ -98,4 +109,5 @@ include "header.php" ?>
         return confirm("Bạn có chắc muốn xoá "+ name + " ?");
       }
   </script>
+
   <?php include "footer.html" ?>
