@@ -1,14 +1,16 @@
 <?php
-require "config.php";
-require "models/db.php";
-require "models/product.php";
-require "models/protype.php";
-require "models/manufacture.php";
-$product = new Product;
-$protype = new Protype;
-$manufacture = new Manufacture;
-
-?>
+   require "config.php";
+   require "models/db.php";
+   require "models/product.php";
+   require "models/protype.php";
+   require "models/manufacture.php";
+   require "models/user.php";
+   $user = new user;
+   $product = new Product;
+   $protype = new Protype;
+   $manufacture = new Manufacture;
+  
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -218,49 +220,69 @@ $manufacture = new Manufacture;
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-
-                </p>
-              </a>
-
-            </li>
-            <li class="nav-item">
-              <a href="protypes.php" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Protypes</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="manufactures.php" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Manufactures</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="addmanufacture.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Add Manufacture</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="products.php" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Products</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="addproducts.php" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p> Add Products</p>
-              </a>
-            </li>
-
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+               
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+                <a href="protypes.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Protypes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="manufactures.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Manufactures</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addmanufacture.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p> Add Manufactures</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="products.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addproducts.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p> Add Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="users.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Usres</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addUsers.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>AddUsers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="addprotypes.php" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p> Add Protypes</p>
+                </a>
+              </li>
+             
+              
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+  
+    <!-- /.sidebar -->
+  </aside>

@@ -1,4 +1,13 @@
-<?php include "header.php" ?>
+<?php
+	session_start();
+	
+	if(isset($_SESSION['cart']))
+	{
+		
+	}
+	include "header.php";
+
+?>
 
 		<!-- BREADCRUMB -->
 		<div id="breadcrumb" class="section">
@@ -7,12 +16,15 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
+						
 						<ul class="breadcrumb-tree">
+							<li><a href="listcart.php">Danh Sach Giỏ Hàng</a></li>
 							<li><a href="#">Home</a></li>
 							<li><a href="#">All Categories</a></li>
 							<li><a href="#">Accessories</a></li>
 							<li class="active">Headphones (227,490 Results)</li>
 						</ul>
+						
 					</div>
 				</div>
 				<!-- /row -->
@@ -184,9 +196,11 @@
 								</div>
 							</div>
 							<?php endforeach;?>
+							
 
 							</div>
 						</div>
+						
 						<!-- /aside Widget -->
 					</div>
 					<!-- /ASIDE -->
@@ -250,7 +264,7 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
+										<button class="add-to-cart-btn" name="add_cart"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id']?>"> add to cart</a></button>
 									</div>
 								</div>
 								
@@ -283,4 +297,4 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-<?php include "footer.htm" ?>
+<?php include "footer.html" ?>

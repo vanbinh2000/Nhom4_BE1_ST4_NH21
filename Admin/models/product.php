@@ -53,5 +53,14 @@ class Product extends Db
         }
         return $sql->execute(); //return an object
     }
+    //count product
+    public function countProducts()
+    {
+        $sql = self::$connection->prepare("SELECT count(*) as SoLuong from `products`");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
 }
 

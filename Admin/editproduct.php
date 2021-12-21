@@ -75,12 +75,12 @@
               <!-- price-->
               <div class="form-group">
                 <label for="inputClientCompany">Price</label>
-                <input type="text" id="inputClientCompany" class="form-control" name = "price" value= "<?php echo $value['price'] ?>">
+                <input type="number" id="inputClientCompany" class="form-control" name = "price" value= "<?php echo $value['price'] ?>">
               </div>
               <!-- Description-->
               <div class="form-group">
-                <label for="inputProjectLeader">Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4" name  = "desc" ><?php  echo $value['description']  ?></textarea>
+                <label for="inputDescription">Project Description</label>
+                <textarea id="description" class="form-control" rows="4" name  = "desc"></textarea>
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">img</label>
@@ -92,7 +92,7 @@
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">Create at</label>
-                <input type="text" id="inputProjectLeader" class="form-control" name="create" value = "<?php echo $value['created_at']?>">
+                <input type="date" id="inputProjectLeader" class="form-control" name="create" value = "<?php echo $value['created_at']?>">
               </div>
             <div class="form-group">
                 <label for="inputProjectLeader">Hang ton</label>
