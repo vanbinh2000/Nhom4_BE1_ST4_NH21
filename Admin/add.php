@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $manu_id = $_POST['manu'];
     $type_id = $_POST['protype'];
-    $desc = $_POST['Desc'];
+    $desc = $_POST['desc'];
     $price = $_POST['price'];
     $image = $_FILES['image']['name'];
     $feature = $_POST['feature'];

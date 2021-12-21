@@ -53,7 +53,10 @@ if (isset($_GET['action'])) {
 							</div>
 
 							<div class="add-to-cart">
-							<button name="addCart" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										<form action="addcart.php?id=<?php echo $getProductById[0]['id']?>" method ="POST">
+										<button class="add-to-cart-btn" name="add_cart"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</form>
+										
 							</div>
 							<ul class="product-links">
 								<li>Category:</li>
@@ -128,7 +131,10 @@ if (isset($_GET['action'])) {
 								</div>
 							</div>
 							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										<form action="addcart.php?id=<?php echo $value['id']?>" method ="POST">
+										<button class="add-to-cart-btn" name="add_cart"><i class="fa fa-shopping-cart"></i> add to cart</button>
+										</form>
+										
 							</div>
 						</div>
 						<?php endforeach; ?>

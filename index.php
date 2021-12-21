@@ -105,7 +105,10 @@ include "header.php";?>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn" ><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+													<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+												</form>
+										
 											</div>
 										</div>
 										<?php endforeach;?>
@@ -140,7 +143,10 @@ include "header.php";?>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+													<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+												</form>
+										
 											</div>
 										</div>
 										<!-- /product -->
@@ -174,7 +180,10 @@ include "header.php";?>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+													<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+												</form>
+										
 											</div>
 										</div>
 										<!-- /product -->
@@ -207,7 +216,10 @@ include "header.php";?>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+													<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+												</form>
+										
 											</div>
 										</div>
 										<!-- /product -->
@@ -241,7 +253,10 @@ include "header.php";?>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<form action="addwishlist.php?id=<?php echo $value['id']?>" method ="POST">
+													<button class="add-to-cart-btn" name="add_wish"><i class="fa fa-shopping-cart"></i>add to wishlist</button>
+												</form>
+										
 											</div>
 										</div>
 										<!-- /product -->
