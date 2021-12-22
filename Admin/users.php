@@ -1,4 +1,4 @@
-<?php include "header.php" ?>
+<?php $page = "users"; include "header.php" ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

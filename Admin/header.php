@@ -7,10 +7,11 @@ require "models/manufacture.php";
 $product = new Product;
 $protype = new Protype;
 $manufacture = new Manufacture;
-
-$pro_count= $product->countProducts();
-$manu_count = $manufacture ->countManu();
-$type_count = $protype -> countProtype();
+require "models/user.php";
+$user = new user;
+$pro_count = $product->countProducts();
+$manu_count = $manufacture->countManu();
+$type_count = $protype->countProtype();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +61,7 @@ $type_count = $protype -> countProtype();
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        
+
         <li class="nav-item">
           <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
@@ -96,11 +97,11 @@ $type_count = $protype -> countProtype();
         </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" id = "navbar">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" id="navbar">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
-              <a href="index.php" class = "nav-link <?php if ($page == 'dashboard') {echo 'active';} ?>">
+              <a href="index.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -110,36 +111,53 @@ $type_count = $protype -> countProtype();
 
             </li>
             <li class="nav-item">
-              <a href="protypes.php" class = "nav-link <?php if ($page == 'protype') {echo 'active';} ?>">
+              <a href="protypes.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Protypes</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="manufactures.php" class = "nav-link <?php if ($page == 'manu') {echo 'active';} ?>">
+              <a href="manufactures.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Manufactures</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="addmanufacture.php" class = "nav-link <?php if ($page == 'addManu') {echo 'active';} ?>">
-                <i class="far fa-circle nav-icon"></i>
+              <a href="addmanufacture.php" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Add Manufacture</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="products.php" class = "nav-link <?php if ($page == 'products') {echo 'active';} ?>">
+              <a href="products.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Products</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="addproducts.php" class = "nav-link <?php if ($page == 'addPro') {echo 'active';} ?>">
+              <a href="addproducts.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p> Add Products</p>
               </a>
             </li>
-
+            <li class="nav-item">
+              <a href="addprotypes.php" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p> Add Protype</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="users.php" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Users</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="addUsers.php" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p> Add User</p>
+              </a>
+            </li>
         </nav>
         <!-- /.sidebar-menu -->
       </div>

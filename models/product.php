@@ -28,7 +28,7 @@ class Product extends Db
     public function getProductByType($type_id)
     {
         $sql = self::$connection->prepare("SELECT * FROM products WHERE `type_id` = ?");
-        $sql->bind_param("i", $id);
+        $sql->bind_param("i", $type_id);
         $sql->execute(); //return an object
 
         $items = array();

@@ -47,7 +47,7 @@ class Manufacture extends Db{
         else
         {
             $sql = self::$connection->prepare("UPDATE `manufactures` SET `manu_name`=?,`manu_logo`=? WHERE manu_id = ?");
-            $sql->bind_param("ssi",$manu_name, $manu_logo, $id);
+            $sql->bind_param("issi", $id,$manu_name, $manu_logo, $id);
         }
         return $sql->execute(); //return an object
     }
